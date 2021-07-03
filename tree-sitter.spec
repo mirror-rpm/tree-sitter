@@ -1,6 +1,6 @@
 Name:           tree-sitter
 Version:        0.20.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        An incremental parsing system for programming tools
 
 License:        MIT
@@ -35,7 +35,7 @@ edited. This is the package with the dynamically linked C library.
 
 %package -n lib%{name}-devel
 Summary:        Development files for %{name}
-Requires:       lib%{name} = %{version}
+Requires:       lib%{name}%{?_isa} = %{version}-%{release}
 
 %description -n lib%{name}-devel
 The %{name}-devel package contains libraries and header files for
@@ -70,5 +70,8 @@ find %{buildroot}%{_libdir} -type f \( -name "*.la" -o -name "*.a" \) -delete -p
 
 
 %changelog
+* Sat Jul 03 2021 Andreas Schneider <asn@redhat.com> - 0.20.0-2
+- Fixed libtree-sitter Require of devel package
+
 * Fri Jul 02 2021 Andreas Schneider <asn@redhat.com> - 0.20.0-1
 - Initial package
