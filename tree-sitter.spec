@@ -1,6 +1,6 @@
 Name:           tree-sitter
-Version:        0.20.0
-Release:        3%{?dist}
+Version:        0.20.1
+Release:        1%{?dist}
 Summary:        An incremental parsing system for programming tools
 
 License:        MIT
@@ -70,6 +70,9 @@ find %{buildroot}%{_libdir} -type f \( -name "*.la" -o -name "*.a" \) -delete -p
 
 
 %changelog
+* Wed Dec 01 2021 Andreas Schneider <asn@redhat.com> - 0.20.1-1
+- Update to version 0.20.1
+
 * Fri Jul 23 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.20.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
 
